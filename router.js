@@ -6,4 +6,5 @@ const router = new Router()
 const user = require('./controller/user')
 //注册
 router.post('/user/register', user.register)
+router.post('/user/queryById', user.queryById)
 module.exports = router

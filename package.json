@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "monk": "^6.0.5"
+  }
+}
