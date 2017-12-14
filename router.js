@@ -25,6 +25,9 @@ router.post('/order/submitOrder', order.submitOrder)
 router.post('/order/searchOrder', order.searchOrder)
 //口味列表
 router.post('/merchant/flavorList', merchant.flavorList)
-
+//充值卡
+router.post('/merchant/storeCard',merchant.storeCard)
+//店铺基础信息
+router.post('/merchant/merchantBasicInfo',merchant.merchantBasicInfo)
 
 module.exports = router

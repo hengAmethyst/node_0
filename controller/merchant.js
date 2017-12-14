@@ -7,6 +7,8 @@ const merchantMust = db.get('merchantMust')
 const dishesCates = db.get('dishesCates')
 const dishesList = db.get('dishesList')
 const flavorList = db.get('flavorList')
+const storeCard = db.get('storeCard')
+const merchantBasicInfo = db.get('merchantBasicInfo')
 
 module.exports = {
 	// 商品信息
@@ -57,6 +59,26 @@ module.exports = {
 		      code: 0,
 		      msg:'成功'
 		    }
+		})
+	},
+	//充值卡
+	async storeCard(ctx){
+		await storeCard.findOne({merchantId:ctx.request.body.merchantId}).then(data => {
+			ctx.body = {
+				data: data,
+				code: 0,
+				msg:'成功'
+			}
+		})
+	},
+	//商家基本信息
+	async merchantBasicInfo(ctx){
+		await merchantBasicInfo.findOne({merchantId:ctx.request.body.merchantId}).then(data => {
+			ctx.body = {
+				data: data,
+				code: 0,
+				msg:'成功'
+			}
 		})
 	}
 }
