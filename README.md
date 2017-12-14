@@ -1,4 +1,4 @@
-# node_0
+# node for fastfood
 node.js搭建的一个初级服务
 
 
